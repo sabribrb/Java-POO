@@ -1,5 +1,7 @@
 package supermercado.V2;
 
+import java.util.Objects;
+
 public class Cliente {
 	private int idCliente;
 	private String cliente;
@@ -62,5 +64,20 @@ public class Cliente {
 		return "Cliente [idCliente=" + idCliente + ", cliente=" + cliente + ", dni=" + dni + ", direccion=" + direccion
 				+ "]";
 	}
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cliente, direccion, dni);
+	}
+
+
+
+	public boolean equals(Cliente cl) {
+		
+		return this.dni==cl.dni ;
+	}
+	
 	
 }
