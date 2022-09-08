@@ -25,19 +25,30 @@ public class testSuperCCliente {
 			sist.agregarCliente("Sabrina", 44725980, "Lanus");
 			sist.agregarCliente("Jose", 87282022, "Lanus");
 			sist.agregarCliente("Carolina", 25842557, "Monte Grande");
-			sist.agregarCliente("Tomas", 44725980, "Capital Federal");
+			sist.agregarCliente("Tomas", 4856872, "Capital Federal");
 			sist.eliminarCliente(2);
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
-		System.out.print(sist.toString());
+		//System.out.print(sist.toString());
 		
 		try {
 			sist.agregarCarrito(LocalDate.now(), LocalTime.now(), sist.traerCliente(1));
 			sist.agregarCarrito(LocalDate.now(), LocalTime.now(), sist.traerCliente(3));
 			sist.agregarCarrito(LocalDate.now(), LocalTime.now(), sist.traerCliente(4));
-			sist.eliminarCarrito(2);
+			
+			//sist.eliminarCarrito(2);
+		} catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+		try {
+			sist.traerCarrito(1).agregarItem(sist.traerProducto(1), 4);
+			sist.traerCarrito(2).agregarItem(sist.traerProducto(1), 2);
+			sist.traerCarrito(2).agregarItem(sist.traerProducto(1), 3);
+			sist.traerCarrito(3).agregarItem(sist.traerProducto(2), 6);
+			//sist.traerCarrito(2).eliminarItem(sist.traerProducto(1), 5);
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
 		}

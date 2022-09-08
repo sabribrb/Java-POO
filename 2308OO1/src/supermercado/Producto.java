@@ -44,7 +44,7 @@ public class Producto {
 	
 	public boolean equals(Producto prod) {
 		
-		return this.producto== prod.getProducto() && this.precio == prod.getPrecio();
+		return this.producto== prod.getProducto();
 	}
 
 }
