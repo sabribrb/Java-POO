@@ -1,5 +1,6 @@
 package modelo;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +58,10 @@ public class SistemaSaludDispositivos {
 		}
 		return d;
 	}
-
+	 
+	public List<Metrica> traerMetricas(Dispositivo dispositivo, LocalDate desde, LocalDate hasta, int menorAValor){
+		return dispositivo.traerMetricas(desde, hasta, menorAValor);
+	}
 	@Override
 	public String toString() {
 		return "SistemaSaludDispositivos [lstDispositivos=" + lstDispositivos + "\n, lstEmpresas=" + lstEmpresas + "]";

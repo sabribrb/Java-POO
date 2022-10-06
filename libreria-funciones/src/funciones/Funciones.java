@@ -91,4 +91,12 @@ public class Funciones {
 	public static double aproximar2Decimal(double valor) {
 		return Math.round(valor*100.0)/100.0;
 	}
+	
+	public static int esMayorQue (LocalDate fecha, LocalDate fechaAComparar) {
+		return fecha.compareTo(fechaAComparar);//-1 si s menor, positivo si es mayor
+	}
+	
+	
+	
+	//agregar funciones para comparar dos fechas y traer la mayor o chequear que la fecha este en una lista
 }

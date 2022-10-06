@@ -53,7 +53,7 @@ public class TestTema2 {
 		System.out.println(sist.traerDispositivo("A2020").traerMetricas(LocalDate.of(2022, 9, 19), LocalDate.of(2022, 9, 21)));
 		
 		System.out.println("\n9)");
-		System.out.println(sist.traerDispositivo("A2020").traerMetricas(LocalDate.of(2022, 9, 19), LocalDate.of(2022, 9, 21), 22));
+		System.out.println(sist.traerMetricas(sist.traerDispositivo("A2020"), LocalDate.of(2022, 9, 19), LocalDate.of(2022, 9, 21), 22));
 
 	
 	}

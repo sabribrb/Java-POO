@@ -121,11 +121,11 @@ public class Dispositivo {
 public List<Metrica> traerMetricas(LocalDate desde, LocalDate hasta, int menorAValor) {
 		
 		List<Metrica> lstM= new ArrayList<Metrica>();
+		List<Metrica> aux= this.traerMetricas(desde, hasta);
 		
-		for (int i=0; i<this.lstMetricas.size();i++) {
-			if(Funciones.estaEnRango(lstMetricas.get(i).getFecha(), desde, hasta)
-					&& lstMetricas.get(i).getValor()< menorAValor ) {
-				lstM.add(lstMetricas.get(i));
+		for (int i=0; i<aux.size();i++) {
+			if(aux.get(i).getValor()< menorAValor ) {
+				lstM.add(aux.get(i));
 			}
 		}
 		
